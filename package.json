@@ -1,0 +1,23 @@
+{
+  "name": "casa-constructions",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/seo-build.mjs",
+    "preview": "vite preview",
+    "chat-id": "node scripts/chat-id.mjs",
+    "hosting": "npm run build && node scripts/hosting.mjs",
+    "test-bot": "node scripts/test-bot.mjs"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
+  }
+}
