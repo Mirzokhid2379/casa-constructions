@@ -29,7 +29,7 @@ export function PageTitle({ title, noindex = false }) {
   const pathname = raw.length > 1 ? raw.replace(/\/+$/, "") : raw;
   useEffect(() => {
     const page = PAGES[lang][pathname];
-    const full = page ? page[0] : title ? `${title} — CASA Constructions` : t.meta.title;
+    const full = page ? page[0] : title ? `${title} — CASA Construction` : t.meta.title;
     const desc = page ? page[1] : t.meta.description;
     const url = SITE_URL + (pathname === "/" ? "/" : pathname);
     document.title = full;

@@ -23,10 +23,13 @@ function PartnerLogo({ id }) {
           <rect width="100" height="100" rx="16" fill="#132E49" />
           <g fill="#DDE4EC">{VIVA_DOTS.map(([x, y, r], i) => <circle key={i} cx={x} cy={y} r={r} />)}</g>
         </svg>
-        <b>VIVA<small>Constructions</small></b>
+        <b>VIVA<small>CONSTRUCTION</small></b>
       </span>
     );
-  return <span className="pt-logo pt-mono">UET</span>;
+  // Qolgan hamkorlar — nomi bilan (rasmiy logolar kelganda shu yerga qo‘shiladi)
+  const WORD = { uet: ["UET", "Construction"], energychina: ["Energy", "China"], lt: ["L&T", "Larsen & Toubro"], acwa: ["ACWA", "Power"], calik: ["Çalık", "Enerji"], mitsubishi: ["Mitsubishi", "Corporation"] };
+  const [a, b] = WORD[id] || [id, ""];
+  return <span className="pt-logo pt-word"><b>{a}</b><small>{b}</small></span>;
 }
 
 export default function Partners() {

@@ -1,4 +1,4 @@
-# CASA Constructions — sayt (React + Vite)
+# CASA Construction — sayt (React + Vite)
 
 - `npm install` — bir marta
 - `npm run dev` — kompyuterda ko‘rish

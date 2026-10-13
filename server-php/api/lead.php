@@ -20,7 +20,7 @@ if ($clip($b['_gotcha'] ?? '', 200) !== '') { echo '{"ok":true}'; exit; } // spa
 if (mb_strlen($name) < 2 || mb_strlen($contact) < 5) { http_response_code(400); echo '{"error":"invalid"}'; exit; }
 
 $dt = new DateTime('now', new DateTimeZone('Asia/Tashkent'));
-$text = "🏗 <b>Yangi so‘rov — CASA Constructions</b>\n\n"
+$text = "🏗 <b>Yangi so‘rov — CASA Construction</b>\n\n"
   . "👤 <b>Ism / kompaniya:</b> " . $esc($name) . "\n"
   . "📞 <b>Aloqa:</b> " . $esc($contact) . "\n"
   . ($msg !== '' ? "📝 <b>Loyiha haqida:</b>\n" . $esc($msg) : "📝 <i>Loyiha haqida yozilmagan</i>") . "\n\n"

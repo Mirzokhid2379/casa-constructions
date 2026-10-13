@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { PageTitle } from "../seo/Head.jsx";
 import { useI18n } from "../i18n/index.jsx";
-import { img } from "../components/Img.js";
+import { img, srcSet, bgBig, bgCard } from "../components/Img.js";
 import { LogoMark } from "../components/Logo.jsx";
 import Icon from "../components/Icons.jsx";
 import { useLightbox } from "../components/Lightbox.jsx";
@@ -18,7 +18,7 @@ function Hero() {
   const h = t.hero;
   return (
     <section className="hero">
-      <div className="hero-ph" style={{ backgroundImage: `url(${img("p412")})` }} />
+      <div className="hero-ph" style={{ backgroundImage: bgBig("p412") }} />
       <div className="hero-mark" aria-hidden="true"><LogoMark size={520} /></div>
       <div className="wrap">
         <div className="eyebrow hero-eb">{h.eyebrow.map((x) => <span key={x}>{x}</span>)}</div>
@@ -68,6 +68,7 @@ function Figures() {
   const { t } = useI18n();
   return (
     <div className="wrap figs-wrap">
+      <Link className="figs-h" to="/loyiha/talimarjon"><Icon name="check" size={16} />{t.figsTitle}</Link>
       <div className="figs">
         {FIGS.map((n, i) => (
           <div className="fig" key={i}>
@@ -88,9 +89,9 @@ function NowBuilding() {
     <section className="now">
       <div className="wrap now-g">
         <div className="now-ph rv">
-          <Link to="/loyiha/navoiy" className="now-a" style={{ backgroundImage: `url(${img("n01")})` }} aria-label={n.title} />
-          <Link to="/loyiha/navoiy" className="now-b" style={{ backgroundImage: `url(${img("n06")})` }} aria-label={n.title} />
-          <Link to="/loyiha/navoiy" className="now-c" style={{ backgroundImage: `url(${img("n04")})` }} aria-label={n.title} />
+          <Link to="/loyiha/navoiy" className="now-a" style={{ backgroundImage: bgCard("v03") }} aria-label={n.title} />
+          <Link to="/loyiha/navoiy" className="now-b" style={{ backgroundImage: bgCard("v05") }} aria-label={n.title} />
+          <Link to="/loyiha/navoiy" className="now-c" style={{ backgroundImage: bgCard("v04") }} aria-label={n.title} />
         </div>
         <div className="now-tx rv">
           <span className="live"><i />{t.projects.active}</span>
@@ -138,13 +139,13 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="frame tall rv" style={{ backgroundImage: `url(${img("p416")})` }} />
+          <div className="frame tall rv" style={{ backgroundImage: bgCard("p416") }} />
         </div>
       </section>
 
       <section className="feat silk">
         <div className="wrap feat-g">
-          <div className="frame arch rv" style={{ backgroundImage: `url(${img("p415")})` }} />
+          <div className="frame arch rv" style={{ backgroundImage: bgCard("p415") }} />
           <div className="rv">
             <div className="eyebrow">{t.feat.eyebrow}</div>
             <h2 className="feat-h">{t.feat.title}</h2>
@@ -166,7 +167,7 @@ export default function Home() {
         <div className="steps-row">
           {STAGES.map((s, i) => (
             <Link className="step-card" key={i} to={`/jarayon#bosqich-${i + 1}`}>
-              <div className="im" style={{ backgroundImage: `url(${img(s.photos[0])})` }} />
+              <div className="im" style={{ backgroundImage: bgCard(s.photos[0]) }} />
               <span className="no">{pad(i + 1)}</span>
               <b>{t.stages[i].t}</b>
             </Link>
@@ -196,7 +197,7 @@ export default function Home() {
           <div className="mosaic">
             {mosaic.map(([k, c], i) => (
               <button type="button" key={k} className={`m${i}`} onClick={() => openPhotos(mosaic, i)} aria-label={c}>
-                <img src={img(k)} alt={c} loading="lazy" decoding="async" />
+                <img src={img(k, 640)} srcSet={srcSet(k)} sizes="(max-width: 700px) 50vw, 33vw" alt={c} loading="lazy" decoding="async" />
               </button>
             ))}
           </div>

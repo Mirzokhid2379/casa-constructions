@@ -3,7 +3,7 @@
 
 export const CONTACTS = {
   phone: "+998 33 002 22 24",
-  email: "info@casaconstructions.uz", // vaqtincha: domen olingach almashtiring
+  email: "info@casaconstruction.uz", // vaqtincha: domen olingach almashtiring
 };
 
 // Havolalar hali yo‘q: url bo‘sh qolsa, ikonka turadi, lekin hech qayerga olib bormaydi
@@ -15,7 +15,7 @@ export const SOCIALS = [
 ];
 
 // Bosh sahifa: raqamlar (matnlari i18n -> figs)
-export const FIGS = ["6 523", "2 307,84", "101", "~100"];
+export const FIGS = ["6 523", "2 307,84", "101", "200"];
 
 // Qurilish bosqichlari va rasmlari (matnlari i18n -> stages, shu tartibda)
 export const STAGES = [
@@ -32,7 +32,7 @@ export const GALLERY = ["p412", "p415", "p418", "p501", "p408", "p420", "p416", 
 // Bosh sahifa mozaikasi
 export const MOSAIC = ["p418", "p408", "p420", "p501", "p411", "p504"];
 
-export const PARTNER_IDS = ["uet", "viva", "omega"];
+export const PARTNER_IDS = ["uet", "energychina", "lt", "acwa", "calik", "mitsubishi", "viva", "omega"];
 // Hamkorlar saytlari (bo‘sh bo‘lsa — havola yo‘q)
 export const PARTNER_LINKS = { viva: "https://vivaconstructions.uz" };
 
@@ -45,8 +45,8 @@ export const REQUISITES = {
 
 // Loyihalar: "navoiy" — hozir qurilmoqda, "talimarjon" — bajarilgan.
 // i18n kaliti: navoiy -> t.navoiy, talimarjon -> t.project
-export const NAVOIY_GALLERY = ["n01", "n02", "n03", "n04", "n05", "n06", "n07", "n08", "n09"];
+export const NAVOIY_GALLERY = Array.from({ length: 24 }, (_, i) => `v${String(i + 1).padStart(2, "0")}`);
 export const PROJECTS = [
-  { id: "navoiy", key: "navoiy", status: "active", cover: "n01", to: "/loyiha/navoiy" },
+  { id: "navoiy", key: "navoiy", status: "active", cover: "v01", to: "/loyiha/navoiy" },
   { id: "talimarjon", key: "project", status: "done", cover: "p412", to: "/loyiha/talimarjon" },
 ];

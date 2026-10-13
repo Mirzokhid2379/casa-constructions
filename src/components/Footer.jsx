@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Brand } from "./Logo.jsx";
 import Socials from "./Socials.jsx";
 import { useI18n } from "../i18n/index.jsx";
-import { CONTACTS, PROJECTS, PARTNER_LINKS } from "../data/site.js";
+import { CONTACTS, PROJECTS, PARTNER_IDS, PARTNER_LINKS } from "../data/site.js";
 
 export default function Footer() {
   const { t } = useI18n();
@@ -31,13 +31,19 @@ export default function Footer() {
               </Link>
             ))}
             <h4 className="fh-gap">{t.footer.partners}</h4>
-            <a href={PARTNER_LINKS.viva} target="_blank" rel="noopener">VIVA Constructions</a>
+            {PARTNER_IDS.map((id) => {
+              const name = t.partners.items[id][0];
+              return PARTNER_LINKS[id]
+                ? <a key={id} href={PARTNER_LINKS[id]} target="_blank" rel="noopener">{name}</a>
+                : <span key={id} className="fpt">{name}</span>;
+            })}
           </div>
           <div>
             <h4>{t.nav.contact}</h4>
             <a className="ftel" href={`tel:${CONTACTS.phone.replace(/\s/g, "")}`}>{CONTACTS.phone}</a>
             <a href={`mailto:${CONTACTS.email}`}>{CONTACTS.email}</a>
-            <span className="faddr">{t.contact.officeVal}</span>
+            <span className="faddr"><em>{t.contact.address}:</em> {t.contact.officeVal}</span>
+            <span className="faddr"><em>{t.contact.legal}:</em> {t.docs.addressVal}</span>
           </div>
         </div>
         <div className="fb"><span>© 2026 “CASA” MChJ · {t.footer.rights}</span><span>STIR 311 436 724</span></div>

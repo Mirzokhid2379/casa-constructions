@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { PageTitle } from "../seo/Head.jsx";
 import { useI18n } from "../i18n/index.jsx";
-import { img } from "../components/Img.js";
+import { img, srcSet, bgBig, bgCard } from "../components/Img.js";
 import Icon from "../components/Icons.jsx";
 import Socials from "../components/Socials.jsx";
 import { Arrow, PageBand } from "../components/Blocks.jsx";
@@ -47,7 +47,7 @@ export default function Contact() {
   return (
     <>
       <PageTitle title={t.nav.contact} />
-      <PageBand crumb={t.nav.contact} title={c.title} img={img("p501")}>{c.lead}</PageBand>
+      <PageBand crumb={t.nav.contact} title={c.title} img={bgBig("p501")}>{c.lead}</PageBand>
       <section>
         <div className="wrap ct-g">
           <div className="ct-card">
@@ -55,6 +55,7 @@ export default function Contact() {
             <div className="ct-row"><span className="ic"><Icon name="phone" size={22} /></span><div><span>{c.phone}</span><a href={`tel:${tel}`}><b>{CONTACTS.phone}</b></a></div><Copy text={CONTACTS.phone} /></div>
             <div className="ct-row"><span className="ic"><Icon name="mail" size={22} /></span><div><span>{c.email}</span><a href={`mailto:${CONTACTS.email}`}><b>{CONTACTS.email}</b></a></div><Copy text={CONTACTS.email} /></div>
             <div className="ct-row"><span className="ic"><Icon name="pin" size={22} /></span><div><span>{c.address}</span><b>{t.contact.officeVal}</b></div></div>
+            <div className="ct-row"><span className="ic"><Icon name="doc" size={22} /></span><div><span>{c.legal}</span><b>{t.docs.addressVal}</b></div></div>
             <div className="ct-soc"><span>{t.social.title}</span><Socials /></div>
           </div>
           <form className="form" noValidate onSubmit={submit}>

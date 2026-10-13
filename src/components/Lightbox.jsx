@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { img } from "./Img.js";
+import { img, srcSet } from "./Img.js";
 import { useI18n } from "../i18n/index.jsx";
 
 // Fotosuratni to‘liq ekranda ochadi. photos: [["kalit","izoh"], ...]
@@ -31,7 +31,7 @@ export default function Lightbox({ photos, index, onClose }) {
         if (e.key === "ArrowLeft") move(-1);
       }}
     >
-      <img src={img(key)} alt={caption} />
+      <img src={img(key)} srcSet={srcSet(key)} sizes="100vw" alt={caption} />
       <div className="c">{caption} · {i + 1} / {n}</div>
       {n > 1 && (
         <>

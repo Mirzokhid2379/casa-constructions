@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { PageTitle } from "../seo/Head.jsx";
 import { useI18n } from "../i18n/index.jsx";
-import { img } from "../components/Img.js";
+import { img, srcSet, bgBig, bgCard } from "../components/Img.js";
 import { useLightbox } from "../components/Lightbox.jsx";
 import { Arrow, Closing, SectionHead, useReveal } from "../components/Blocks.jsx";
 import Icon from "../components/Icons.jsx";
@@ -17,7 +17,7 @@ function ProjectView({ p, tag, cover, gallery, live, otherTo, otherLabel }) {
     <>
       <PageTitle title={p.title} />
       <section className="p-hero">
-        <div className="p-hero-ph" style={{ backgroundImage: `url(${img(cover)})` }} />
+        <div className="p-hero-ph" style={{ backgroundImage: bgBig(cover) }} />
         <div className="wrap">
           <div className="crumbs">
             <Link to="/">{t.nav.home}</Link><span>/</span>
@@ -72,7 +72,7 @@ function ProjectView({ p, tag, cover, gallery, live, otherTo, otherLabel }) {
           <div className="gal">
             {photos.map(([k, c], i) => (
               <button type="button" key={k} onClick={() => openPhotos(photos, i)} aria-label={`${c} ${i + 1}`}>
-                <img src={img(k)} alt={c} loading="lazy" decoding="async" />
+                <img src={img(k, 640)} srcSet={srcSet(k)} sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 400px" alt={c} loading="lazy" decoding="async" />
               </button>
             ))}
           </div>
@@ -92,7 +92,7 @@ export function ProjectTalimarjon() {
 
 export function ProjectNavoiy() {
   const { t } = useI18n();
-  return <ProjectView p={t.navoiy} tag={t.navoiy.tag} cover="n01" gallery={NAVOIY_GALLERY} live otherTo="/loyiha" otherLabel={t.nav.project} />;
+  return <ProjectView p={t.navoiy} tag={t.navoiy.tag} cover="v01" gallery={NAVOIY_GALLERY} live otherTo="/loyiha" otherLabel={t.nav.project} />;
 }
 
 // Eski App.jsx bilan ham ishlashi uchun (import Project from "./pages/Project.jsx")

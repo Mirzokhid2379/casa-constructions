@@ -16,7 +16,7 @@ export async function sendLead(body, { token, chatId }) {
 
   const time = new Date().toLocaleString("ru-RU", { timeZone: "Asia/Tashkent" });
   const text = [
-    "🏗 <b>Yangi so‘rov — CASA Constructions</b>",
+    "🏗 <b>Yangi so‘rov — CASA Construction</b>",
     "",
     `👤 <b>Ism / kompaniya:</b> ${esc(name)}`,
     `📞 <b>Aloqa:</b> ${esc(contact)}`,

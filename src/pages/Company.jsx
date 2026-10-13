@@ -1,6 +1,6 @@
 import { PageTitle } from "../seo/Head.jsx";
 import { useI18n } from "../i18n/index.jsx";
-import { img } from "../components/Img.js";
+import { img, srcSet, bgBig, bgCard } from "../components/Img.js";
 import Icon from "../components/Icons.jsx";
 import { Closing, PageBand, SectionHead, useReveal } from "../components/Blocks.jsx";
 import Documents from "../components/Documents.jsx";
@@ -14,7 +14,7 @@ export default function Company() {
   return (
     <>
       <PageTitle title={t.nav.company} />
-      <PageBand crumb={t.nav.company} title={c.title} img={img("p418")}>{c.lead}</PageBand>
+      <PageBand crumb={t.nav.company} title={c.title} img={bgBig("p418")}>{c.lead}</PageBand>
       <section>
         <div className="wrap about-g">
           <div className="rv">
@@ -25,7 +25,7 @@ export default function Company() {
               <div><span>{c.leaderTitle}</span><b>{c.leader[0]}</b><small>{c.leader[1]}</small></div>
             </div>
           </div>
-          <div className="frame tall rv" style={{ backgroundImage: `url(${img("p413")})` }} />
+          <div className="frame tall rv" style={{ backgroundImage: bgCard("p413") }} />
         </div>
       </section>
       <section className="adv silk">

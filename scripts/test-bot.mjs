@@ -12,7 +12,7 @@ const token = env.TELEGRAM_BOT_TOKEN, chat = env.TELEGRAM_CHAT_ID;
 console.log("Token:", token ? token.slice(0, 10) + "…" : "YO‘Q");
 console.log("Chat ID:", chat || "YO‘Q");
 if (!token || !chat) process.exit(1);
-const r = await telegram(token, chat, "✅ CASA Constructions: sinov xabari. Bot ishlayapti!");
+const r = await telegram(token, chat, "✅ CASA Construction: sinov xabari. Bot ishlayapti!");
 console.log(r.ok ? "\n✅ Yuborildi! Telegramni tekshiring." : "\n❌ Xato:", r.ok ? "" : (r.description || r.error));
 if (!r.ok && /chat not found/i.test(r.description || "")) console.log("→ Chat ID noto‘g‘ri yoki botga /start yozilmagan.");
 if (!r.ok && /blocked|initiate/i.test(r.description || "")) console.log("→ Telegramda botni oching va /start bosing.");

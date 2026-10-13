@@ -13,7 +13,7 @@ const esc = (s) => s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g
 let base = fs.readFileSync(path.join(DIST, "index.html"), "utf8").replaceAll("https://casa-site.placeholder", SITE_URL);
 fs.writeFileSync(path.join(DIST, "index.html"), base);
 
-const routes = Object.entries(PAGES.uz).map(([p, [title, desc]]) => ({ p, title, desc, pr: p === "/" ? "1.0" : "0.8" }));
+const routes = Object.entries(PAGES.en).map(([p, [title, desc]]) => ({ p, title, desc, pr: p === "/" ? "1.0" : "0.8" }));
 
 const setMeta = (html, attr, key, val) =>
   html.replace(new RegExp(`(<meta ${attr}="${key}" content=")[^"]*(")`), `$1${esc(val)}$2`);

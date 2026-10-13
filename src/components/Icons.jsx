@@ -14,6 +14,7 @@ const paths = {
   pin: <><path d="M12 21s-7-6-7-12a7 7 0 0 1 14 0c0 6-7 12-7 12z" /><circle cx="12" cy="9" r="2.5" /></>,
   user: <><circle cx="12" cy="8" r="4" /><path d="M4 21a8 8 0 0 1 16 0" /></>,
   doc: <><path d="M6 3h9l4 4v14H6z" /><path d="M14 3v5h5M9 12h7M9 16h7" /></>,
+  check: <><circle cx="12" cy="12" r="9" /><path d="M8 12.5l2.7 2.7L16 9.8" /></>,
 };
 export default function Icon({ name, size = 28 }) {
   return <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true" {...S}>{paths[name]}</svg>;

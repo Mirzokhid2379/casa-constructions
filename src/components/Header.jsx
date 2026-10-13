@@ -26,7 +26,7 @@ export default function Header() {
     <>
       <header className={`top${solid ? " solid" : ""}`}>
         <div className="wrap">
-          <Link className="brand" to="/" aria-label={`CASA Constructions — ${t.nav.home}`}><Brand /></Link>
+          <Link className="brand" to="/" aria-label={`CASA Construction — ${t.nav.home}`}><Brand /></Link>
           <nav className="nav" aria-label="Main">
             {links.map(([to, l]) => <NavLink key={to} to={to}>{l}</NavLink>)}
           </nav>

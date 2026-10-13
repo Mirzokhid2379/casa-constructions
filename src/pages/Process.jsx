@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { PageTitle } from "../seo/Head.jsx";
 import { useI18n } from "../i18n/index.jsx";
-import { img } from "../components/Img.js";
+import { img, srcSet, bgBig, bgCard } from "../components/Img.js";
 import { useLightbox } from "../components/Lightbox.jsx";
 import { Arrow, Closing, PageBand, useReveal } from "../components/Blocks.jsx";
 import { STAGES } from "../data/site.js";
@@ -47,7 +47,7 @@ export default function Process() {
   return (
     <>
       <PageTitle title={t.nav.process} />
-      <PageBand crumb={t.nav.process} title={pr.title} img={img("p411")}>{pr.lead}</PageBand>
+      <PageBand crumb={t.nav.process} title={pr.title} img={bgBig("p411")}>{pr.lead}</PageBand>
 
       <nav className="rail">
         <div className="wrap">
@@ -79,13 +79,13 @@ export default function Process() {
                 </div>
                 <div className="st-media">
                   <button type="button" className="st-main" onClick={() => openPhotos(photos, 0)} aria-label={x.t}>
-                    <img src={img(main)} alt={x.t} loading={i ? "lazy" : "eager"} decoding="async" />
+                    <img src={img(main, 1024)} srcSet={srcSet(main)} sizes="(max-width: 900px) 100vw, 60vw" alt={x.t} loading={i ? "lazy" : "eager"} decoding="async" />
                     <span className="cnt">{pr.photos(photos.length)}</span>
                   </button>
                   <div className="st-th">
                     {th.map((k, j) => (
                       <button type="button" key={k} onClick={() => openPhotos(photos, j + 1)} aria-label={`${x.t} ${j + 2}`}>
-                        <img src={img(k)} alt="" loading="lazy" decoding="async" />
+                        <img src={img(k, 640)} alt="" loading="lazy" decoding="async" />
                         {j === th.length - 1 && rest.length > th.length && <span className="more">+{rest.length - th.length}</span>}
                       </button>
                     ))}

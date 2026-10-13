@@ -2,10 +2,10 @@ export default {
   code: "uz",
   htmlLang: "uz",
   meta: {
-    title: "CASA Constructions — sanoat va infratuzilma qurilishi",
-    description: "CASA Constructions: sanoat va energetika obyektlarida monolit beton, armatura va qolip ishlari. Talimarjon IES TPC2 (900 MVt): 6 523 m³ beton, 2 307,84 t armatura.",
+    title: "CASA Construction — sanoat va infratuzilma qurilishi",
+    description: "CASA Construction: sanoat va energetika obyektlarida monolit beton, armatura va qolip ishlari. Talimarjon IES TPC2 (900 MVt): 6 523 m³ beton, 2 307,84 t armatura.",
   },
-  brandSub: "Constructions",
+  brandSub: "Construction",
   nav: { home: "Bosh sahifa", project: "Loyihalar", process: "Jarayon", company: "Kompaniya", contact: "Aloqa", cta: "Bog‘lanish", open: "Menyuni ochish", close: "Yopish", lang: "Til" },
 
   hero: {
@@ -17,12 +17,13 @@ export default {
     cap: ["Navoiy IES · CCGT 600+ MVt", "Hozir qurilmoqda"],
     scroll: "Pastga",
   },
+  figsTitle: "Talimarjon IES · TPC2 · bajarilgan loyiha",
   figs: [["m³", "beton ishlari"], ["t", "armatura ishlari"], ["kun", "qurilish muddati"], ["", "ishchi va mutaxassis"]],
 
   about: {
     eyebrow: "Biz haqimizda",
     title: "Mustahkam poydevor. Ishonchli kelajak.",
-    text: "CASA Constructions — sanoat va infratuzilma obyektlarini qurishga ixtisoslashgan kompaniya. Biz sifat, xavfsizlik va ish jarayonining puxta tashkil etilishiga alohida e’tibor beramiz.",
+    text: "CASA Construction — sanoat va infratuzilma obyektlarini qurishga ixtisoslashgan kompaniya. Biz sifat, xavfsizlik va ish jarayonining puxta tashkil etilishiga alohida e’tibor beramiz.",
     dirs: [
       ["Sanoat qurilishi", "Sanoat obyektlari va ishlab chiqarish inshootlari."],
       ["Mustahkamlik", "Monolit beton, armatura va qolip ishlari."],
@@ -34,7 +35,7 @@ export default {
     eyebrow: "Bajarilgan loyiha",
     title: "Talimarjon IES",
     sub: "TPC2 · 900 MVt qo‘shimcha quvvat",
-    text: "Talimarjon issiqlik elektr stansiyasiga 900 MVt qo‘shimcha quvvat o‘rnatish loyihasida bosh pudratchi UET Constructions bilan birga temirbeton ishlarini bajardik — 101 kun ichida.",
+    text: "Talimarjon issiqlik elektr stansiyasiga 900 MVt qo‘shimcha quvvat o‘rnatish loyihasida bosh pudratchi UET Construction bilan birga temirbeton ishlarini bajardik — 101 kun ichida.",
     btn: "Loyiha haqida batafsil",
   },
 
@@ -50,7 +51,7 @@ export default {
     title: "Har bir loyihada puxtalik, mas’uliyat va sifat",
     items: [
       ["Sifat va xavfsizlik", "Har bir bosqich nazorat ostida: armatura karkasi betondan oldin tekshiriladi, ishchilar har kuni xavfsizlik yo‘riqnomasidan o‘tadi."],
-      ["Malakali mutaxassislar", "Tajribali armaturachi, betonchi va qolipchilardan iborat 100 ga yaqin kishilik jamoa."],
+      ["Malakali mutaxassislar", "Tajribali armaturachi, betonchi va qolipchilardan iborat 200 ga yaqin kishilik jamoa."],
       ["Ishonchli hamkorlik", "Vazifalarni mas’uliyat bilan, kelishilgan muddatda bajarishga intilamiz."],
     ],
   },
@@ -59,8 +60,17 @@ export default {
 
   partners: {
     eyebrow: "Hamkorlar",
-    title: "Kimlar bilan ishlaymiz",
-    items: { uet: ["UET Constructions", "Bosh pudratchi · Talimarjon IES"], viva: ["VIVA Constructions", "Hamkor kompaniya · energetika obyektlari"], omega: ["OMEGA Energy Group", "Hamkor kompaniya · elektr stansiyalari qurilishi"] },
+    title: "Biz bilan ishlagan va ishlayotgan kompaniyalar",
+    items: {
+      uet: ["UET Construction", "Bosh pudratchi · Talimarjon IES"],
+      energychina: ["Energy China", "EPC-pudratchi · energetika loyihalari"],
+      lt: ["Larsen & Toubro Limited", "EPC-pudratchi · elektr stansiyalari"],
+      acwa: ["ACWA Power", "Investor · energetika loyihalari"],
+      calik: ["Çalık Enerji", "EPC-pudratchi · energetika loyihalari"],
+      mitsubishi: ["Mitsubishi Corporation", "Hamkor kompaniya · energetika loyihalari"],
+      viva: ["VIVA Construction", "Hamkor kompaniya · energetika obyektlari"],
+      omega: ["OMEGA Energy Group", "Hamkor kompaniya · elektr stansiyalari qurilishi"],
+    },
   },
 
   docs: {
@@ -68,11 +78,11 @@ export default {
     title: "Davlat ro‘yxatidan o‘tganlik guvohnomasi",
     text: "“CASA” MChJ yuridik shaxs sifatida 2024-yil 1-iyulda ro‘yxatdan o‘tgan.",
     open: "Hujjatni ochish",
-    rows: { name: "Yuridik nom", stir: "STIR", reg: "Ro‘yxat raqami", date: "Ro‘yxatdan o‘tgan sana", capital: "Ustav kapitali", address: "Manzil", form: "Tashkiliy-huquqiy shakl" },
+    rows: { name: "Yuridik nom", stir: "STIR", reg: "Ro‘yxat raqami", date: "Ro‘yxatdan o‘tgan sana", capital: "Ustav kapitali", address: "Yuridik manzil", form: "Tashkiliy-huquqiy shakl" },
     nameVal: "“CASA” mas’uliyati cheklangan jamiyat",
     formVal: "Mas’uliyati cheklangan jamiyat",
     capitalUnit: "so‘m",
-    addressVal: "Toshkent sh., Yangihayot tumani, Yangi Turmush MFY, Tursunzoda ko‘chasi, 12/18",
+    addressVal: "Toshkent sh., Bektemir tumani, Zabardast MFY, Sohibkor ko‘chasi, 5-uy",
     caption: "Davlat ro‘yxatidan o‘tganlik guvohnomasi",
   },
 
@@ -96,7 +106,7 @@ export default {
     place: "Navoiy viloyati, Karmana tumani",
     facts: [["Obyekt", "Bug‘-gaz qurilmasi (CCGT)"], ["Quvvati", "600 MVt dan ortiq"], ["Podstansiya", "500/220 kV"], ["Holati", "Qurilish davom etmoqda"]],
     stats: [["600+ MVt", "bug‘-gaz qurilmasi quvvati"], ["500/220 kV", "podstansiya kuchlanishi"], ["CCGT", "bug‘-gaz qurilmasi"], ["EUL", "elektr uzatish liniyasi"]],
-    lead: "Navoiy issiqlik elektr stansiyasida yangi quvvat barpo etilmoqda: 600 MVt dan ortiq bug‘-gaz qurilmasi, 500/220 kV kuchlanishli podstansiya va elektr uzatish liniyasi. CASA Constructions bu loyihada monolit temirbeton ishlarini olib bormoqda.",
+    lead: "Navoiy issiqlik elektr stansiyasida yangi quvvat barpo etilmoqda: 600 MVt dan ortiq bug‘-gaz qurilmasi, 500/220 kV kuchlanishli podstansiya va elektr uzatish liniyasi. CASA Construction bu loyihada monolit temirbeton ishlarini olib bormoqda.",
     scopeTitle: "Obyektdagi ishlarimiz",
     scope: [
       "Monolit temirbeton karkasli binolar: ustunlar, to‘sinlar va qavat plitalari",
@@ -113,9 +123,9 @@ export default {
     title: "Talimarjon IES",
     sub: "Talimarjon issiqlik elektr stansiyasiga qo‘shimcha quvvat (900 MVt) o‘rnatish loyihasi — TPC2",
     place: "Qashqadaryo viloyati, O‘zbekiston",
-    facts: [["Bizning rolimiz", "Temirbeton ishlari pudratchisi"], ["Bosh pudratchi", "UET Constructions"], ["Muddat", "15.08.2024 — 24.11.2024"], ["Holati", "Bajarilgan"]],
-    stats: [["900 MVt", "stansiya quvvati"], ["6 523 m³", "beton ishlari"], ["2 307,84 t", "armatura ishlari"], ["101 kun", "ish muddati"], ["~100", "ishchi va mutaxassis"], ["$1 mln", "shartnoma qiymati"]],
-    lead: "Talimarjon IES O‘zbekistonning eng yirik issiqlik elektr stansiyalaridan biri. TPC2 loyihasi doirasida stansiyaga 900 MVt qo‘shimcha quvvat qo‘shiladi. CASA Constructions bosh pudratchi UET Constructions buyurtmasi bilan loyihaning monolit temirbeton qismini bajardi.",
+    facts: [["Bizning rolimiz", "Temirbeton ishlari pudratchisi"], ["Bosh pudratchi", "UET Construction"], ["Muddat", "15.08.2024 — 24.11.2024"], ["Holati", "Bajarilgan"]],
+    stats: [["900 MVt", "stansiya quvvati"], ["6 523 m³", "beton ishlari"], ["2 307,84 t", "armatura ishlari"], ["101 kun", "ish muddati"], ["200", "ishchi va mutaxassis"], ["$1 mln", "shartnoma qiymati"]],
+    lead: "Talimarjon IES O‘zbekistonning eng yirik issiqlik elektr stansiyalaridan biri. TPC2 loyihasi doirasida stansiyaga 900 MVt qo‘shimcha quvvat qo‘shiladi. CASA Construction bosh pudratchi UET Construction buyurtmasi bilan loyihaning monolit temirbeton qismini bajardi.",
     scopeTitle: "Biz bajargan ishlar",
     scope: [
       "6 523 m³ monolit beton ishlari",
@@ -143,15 +153,15 @@ export default {
     { t: "Armatura ishlari", d: "Poydevor plitalari, devorlar va ustunlar uchun armatura karkaslari joyida yig‘iladi. Loyiha davomida jami 2 307,84 tonna armatura bog‘landi.", pts: ["2 307,84 t armatura", "Poydevor va devor karkaslari", "Havozalarda xavfsiz ish"] },
     { t: "Qolip va beton ishlari", d: "Metall va yog‘och qoliplar o‘rnatiladi — to‘g‘ri devorlardan aylana inshootlargacha — so‘ng beton quyiladi. Jami 6 523 m³ monolit beton.", pts: ["Metall panel qoliplar", "Aylana inshoot qolipi", "6 523 m³ beton"] },
     { t: "Ustunlar va poydevorlar", d: "Monolit poydevor plitalari ustida ustun karkaslari ko‘tariladi — bino tayanchlari shakllanadi.", pts: ["Ustun karkaslari", "Poydevor plitalari", "O‘lcham nazorati"] },
-    { t: "Bosh bino yonidagi inshootlar", d: "Stansiyaning metall karkasli bosh binosi yonida murakkab poydevor va yerosti inshootlari barpo etildi. Ishda 100 ga yaqin ishchi va mutaxassis qatnashdi.", pts: ["Murakkab poydevorlar", "Yerosti inshootlari", "~100 ishchi va mutaxassis"] },
+    { t: "Bosh bino yonidagi inshootlar", d: "Stansiyaning metall karkasli bosh binosi yonida murakkab poydevor va yerosti inshootlari barpo etildi. Ishda 200 ga yaqin ishchi va mutaxassis qatnashdi.", pts: ["Murakkab poydevorlar", "Yerosti inshootlari", "200 ishchi va mutaxassis"] },
   ],
 
   company: {
-    title: "CASA Constructions",
+    title: "CASA Construction",
     lead: "Sanoat va infratuzilma obyektlarida monolit temirbeton ishlari. Toshkent, 2024-yildan.",
     aboutTitle: "Kompaniya haqida",
     about: [
-      "CASA Constructions 2024-yilda Toshkentda tashkil topgan. Kompaniya yashash uchun mo‘ljallanmagan binolar — sanoat va energetika obyektlari qurilishiga ixtisoslashgan.",
+      "CASA Construction 2024-yilda Toshkentda tashkil topgan. Kompaniya yashash uchun mo‘ljallanmagan binolar — sanoat va energetika obyektlari qurilishiga ixtisoslashgan.",
       "Birinchi yirik loyihamiz — Talimarjon IES TPC2: 101 kun ichida 6 523 m³ beton va 2 307,84 tonna armatura ishlari bajarildi.",
     ],
     leaderTitle: "Rahbariyat",
@@ -168,7 +178,7 @@ export default {
   contact: {
     title: "Loyihangizni muhokama qilamiz",
     lead: "Sanoat yoki infratuzilma obyekti bo‘yicha yozing — taklif tayyorlaymiz.",
-    director: "Direktor", phone: "Telefon", email: "Elektron pochta", address: "Ofis manzili",
+    director: "Direktor", phone: "Telefon", email: "Elektron pochta", address: "Bosh ofis", legal: "Yuridik manzil",
     officeVal: "Toshkent sh., Shayxontohur tumani, O‘qchi MFY, Islom Karimov ko‘chasi, 1a-uy, 4, “NEST ONE” binosi",
     formTitle: "So‘rov yuborish", name: "Ism va kompaniya", contact: "Telefon yoki pochta", msg: "Loyiha haqida qisqacha", msgPh: "Obyekt turi, hajm, joylashuv, muddat…",
     send: "Yuborish", sending: "Yuborilmoqda…", fail: "Xabar yuborilmadi. Iltimos, qo‘ng‘iroq qiling:", err: "Ism va telefon yoki pochtani kiriting.", ok: "Rahmat! So‘rovingiz yuborildi. Tez orada siz bilan bog‘lanamiz.",
@@ -177,5 +187,5 @@ export default {
   social: { title: "Ijtimoiy tarmoqlar" },
   lightbox: { label: "Rasm", prev: "Oldingi", next: "Keyingi", close: "Yopish" },
   notFound: { title: "Sahifa topilmadi", back: "Bosh sahifaga qaytish" },
-  footer: { about: "CASA Constructions — sanoat va energetika obyektlarida monolit temirbeton ishlarini bajaruvchi kompaniya. Poydevor, ustun, devor va plitalar, armatura va qolip ishlari — sifat va xavfsizlik nazorati ostida. Talimarjon IES loyihasini 101 kunda yakunladik, hozir Navoiy IESda bug‘-gaz qurilmasi qurilishida ishlamoqdamiz. Toshkent, 2024-yildan.", partners: "Hamkorlar", site: "Sayt", rights: "Barcha huquqlar himoyalangan" },
+  footer: { about: "CASA Construction — sanoat va energetika obyektlarida monolit temirbeton ishlarini bajaruvchi kompaniya. Poydevor, ustun, devor va plitalar, armatura va qolip ishlari — sifat va xavfsizlik nazorati ostida. Talimarjon IES loyihasini 101 kunda yakunladik, hozir Navoiy IESda bug‘-gaz qurilmasi qurilishida ishlamoqdamiz. Toshkent, 2024-yildan.", partners: "Hamkorlar", site: "Sayt", rights: "Barcha huquqlar himoyalangan" },
 };

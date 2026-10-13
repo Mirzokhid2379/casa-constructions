@@ -24,7 +24,7 @@ export function PageBand({ crumb, title, children, img }) {
   const { t } = useI18n();
   return (
     <section className="band silk">
-      {img && <div className="band-ph" style={{ backgroundImage: `url(${img})` }} />}
+      {img && <div className="band-ph" style={{ backgroundImage: img }} />}
       <div className="wrap">
         <div className="crumbs"><Link to="/">{t.nav.home}</Link><span>/</span><span>{crumb}</span></div>
         <h1>{title}</h1>
