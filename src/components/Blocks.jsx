@@ -64,3 +64,15 @@ export function useReveal(dep) {
     return () => { io.disconnect(); clearTimeout(safety); };
   }, [dep]);
 }
+
+// Rasm ramkasi — CASA logosidagi uy shaklida (tom, mo‘ri, oltin chiziq)
+export function HouseFrame({ bg, className = "" }) {
+  return (
+    <div className={`house-frame rv ${className}`}>
+      <div className="hf-img" style={{ backgroundImage: bg }} />
+      <svg className="hf-line" viewBox="0 0 100 125" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M1.5 34.5 L50 2 L71 16 V6.5 H80 V22 L98.5 34.5 V123.5 H1.5 Z" vectorEffect="non-scaling-stroke" />
+      </svg>
+    </div>
+  );
+}

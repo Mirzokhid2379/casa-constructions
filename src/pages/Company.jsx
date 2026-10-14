@@ -2,7 +2,7 @@ import { PageTitle } from "../seo/Head.jsx";
 import { useI18n } from "../i18n/index.jsx";
 import { img, srcSet, bgBig, bgCard } from "../components/Img.js";
 import Icon from "../components/Icons.jsx";
-import { Closing, PageBand, SectionHead, useReveal } from "../components/Blocks.jsx";
+import { Closing, PageBand, SectionHead, useReveal, HouseFrame } from "../components/Blocks.jsx";
 import Documents from "../components/Documents.jsx";
 import Partners from "../components/Partners.jsx";
 
@@ -25,7 +25,7 @@ export default function Company() {
               <div><span>{c.leaderTitle}</span><b>{c.leader[0]}</b><small>{c.leader[1]}</small></div>
             </div>
           </div>
-          <div className="frame tall rv" style={{ backgroundImage: bgCard("p413") }} />
+          <HouseFrame bg={bgCard("p413")} />
         </div>
       </section>
       <section className="adv silk">

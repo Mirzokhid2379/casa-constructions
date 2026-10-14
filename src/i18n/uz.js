@@ -149,7 +149,7 @@ export default {
     photos: (n) => `${n} ta rasm`,
   },
   stages: [
-    { t: "Tayyorgarlik va yer ishlari", d: "Ish joyi tayyorlanadi, poydevor chuqurlari va xandaqlar qaziladi, tagi betonlanadi. Har bir o‘q bosh pudratchi muhandislari bilan birga tekshiriladi.", pts: ["Chuqur va xandaqlar", "Tagi tayyorlash betoni", "Geodezik nazorat"] },
+    { t: "Tayyorgarlik va yer ishlari", d: "Maydon yuklagich va samosvallar bilan tekislanadi, keyin poydevor chuqurlari va xandaqlar qaziladi, tagi betonlanadi. Har bir o‘q bosh pudratchi muhandislari bilan birga tekshiriladi.", pts: ["Maydonni tekislash", "Chuqur va xandaqlar", "Geodezik nazorat"] },
     { t: "Armatura ishlari", d: "Poydevor plitalari, devorlar va ustunlar uchun armatura karkaslari joyida yig‘iladi. Loyiha davomida jami 2 307,84 tonna armatura bog‘landi.", pts: ["2 307,84 t armatura", "Poydevor va devor karkaslari", "Havozalarda xavfsiz ish"] },
     { t: "Qolip va beton ishlari", d: "Metall va yog‘och qoliplar o‘rnatiladi — to‘g‘ri devorlardan aylana inshootlargacha — so‘ng beton quyiladi. Jami 6 523 m³ monolit beton.", pts: ["Metall panel qoliplar", "Aylana inshoot qolipi", "6 523 m³ beton"] },
     { t: "Ustunlar va poydevorlar", d: "Monolit poydevor plitalari ustida ustun karkaslari ko‘tariladi — bino tayanchlari shakllanadi.", pts: ["Ustun karkaslari", "Poydevor plitalari", "O‘lcham nazorati"] },

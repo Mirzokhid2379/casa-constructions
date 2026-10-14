@@ -6,7 +6,7 @@ import { img, srcSet, bgBig, bgCard } from "../components/Img.js";
 import { LogoMark } from "../components/Logo.jsx";
 import Icon from "../components/Icons.jsx";
 import { useLightbox } from "../components/Lightbox.jsx";
-import { Arrow, Closing, SectionHead, useReveal } from "../components/Blocks.jsx";
+import { Arrow, Closing, SectionHead, useReveal, HouseFrame } from "../components/Blocks.jsx";
 import Documents from "../components/Documents.jsx";
 import Partners from "../components/Partners.jsx";
 import { FIGS, MOSAIC, STAGES } from "../data/site.js";
@@ -139,13 +139,13 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="frame tall rv" style={{ backgroundImage: bgCard("p416") }} />
+          <HouseFrame bg={bgCard("p416")} />
         </div>
       </section>
 
       <section className="feat silk">
         <div className="wrap feat-g">
-          <div className="frame arch rv" style={{ backgroundImage: bgCard("p415") }} />
+          <HouseFrame bg={bgCard("p415")} className="dark" />
           <div className="rv">
             <div className="eyebrow">{t.feat.eyebrow}</div>
             <h2 className="feat-h">{t.feat.title}</h2>

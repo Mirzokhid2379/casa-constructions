@@ -449,3 +449,15 @@ a.pt:hover .pt-link .ar{transform:translateX(4px)}
 .figs-h:hover{border-color:var(--gold)}
 .foot .fpt{display:block;color:#D3DDD8;padding:4px 0;font-size:15px}
 .faddr em{font-style:normal;color:var(--gold);font-size:12px;letter-spacing:.08em;text-transform:uppercase;display:block}
+
+/* Uy shaklidagi rasm ramkasi (logodagi uy) */
+.house-frame{position:relative;width:100%;max-width:440px;aspect-ratio:4/5;justify-self:center;filter:drop-shadow(0 30px 40px rgba(10,36,30,.35))}
+.hf-img{position:absolute;inset:0;background-size:cover;background-position:center;
+  clip-path:polygon(1.5% 27.6%,50% 1.6%,71% 12.8%,71% 5.2%,80% 5.2%,80% 17.6%,98.5% 27.6%,98.5% 98.8%,1.5% 98.8%);
+  transition:transform .6s var(--ease)}
+.house-frame:hover .hf-img{transform:scale(1.015)}
+.hf-line{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.hf-line path{fill:none;stroke:var(--gold);stroke-width:4;stroke-linejoin:round;opacity:.9}
+.house-frame.dark .hf-line path{stroke:var(--gold2)}
+.feat .house-frame{max-width:440px}
+@media (max-width:860px){.house-frame{max-width:380px;margin-inline:auto}}

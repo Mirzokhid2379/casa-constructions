@@ -149,7 +149,7 @@ export default {
     photos: (n) => `${n} photos`,
   },
   stages: [
-    { t: "Preparation and earthworks", d: "The site is prepared, pits and trenches are excavated and blinding concrete is laid. Every axis is checked with the general contractor’s engineers.", pts: ["Pits and trenches", "Blinding concrete", "Survey control"] },
+    { t: "Preparation and earthworks", d: "The site is levelled with loaders and dump trucks, then pits and trenches are excavated and blinding concrete is laid. Every axis is checked with the general contractor’s engineers.", pts: ["Site levelling", "Pits and trenches", "Survey control"] },
     { t: "Rebar works", d: "Rebar cages for foundation slabs, walls and columns are assembled on site. In total, 2,307.84 t of rebar were tied.", pts: ["2,307.84 t of rebar", "Foundation and wall cages", "Safe work on scaffolding"] },
     { t: "Formwork and concrete", d: "Steel and timber formwork is installed — from straight walls to circular structures — and then concrete is poured. 6,523 m³ of cast-in-place concrete in total.", pts: ["Steel panel formwork", "Circular structure formwork", "6,523 m³ of concrete"] },
     { t: "Columns and foundations", d: "Column cages rise from the cast-in-place foundation slabs as the building supports take shape.", pts: ["Column cages", "Foundation slabs", "Dimension checks"] },

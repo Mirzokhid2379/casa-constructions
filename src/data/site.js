@@ -19,7 +19,7 @@ export const FIGS = ["6 523", "2 307,84", "101", "200"];
 
 // Qurilish bosqichlari va rasmlari (matnlari i18n -> stages, shu tartibda)
 export const STAGES = [
-  { photos: ["p417", "p505", "p506", "p414"] },
+  { photos: ["e05", "e01", "e02", "e03", "e04", "e06", "e07", "e08", "p417", "p505"] },
   { photos: ["p501", "p415", "p416", "p418", "p419", "p504"] },
   { photos: ["p420", "p507", "p503"] },
   { photos: ["p408", "p401", "p407"] },
