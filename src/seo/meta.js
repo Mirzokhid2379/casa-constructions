@@ -2,7 +2,7 @@
 export const KEYWORDS = {
   uz: "CASA Construction, CASA MChJ, sanoat qurilishi, infratuzilma qurilishi, monolit beton ishlari, armatura ishlari, qolip ishlari, Navoiy IES, bug‘-gaz qurilmasi, CCGT, podstansiya 500/220 kV, Talimarjon IES, TPC2, qurilish kompaniyasi Toshkent, qurilish pudratchisi O‘zbekiston, temirbeton",
   ru: "CASA Construction, ООО CASA, промышленное строительство, монолитные бетонные работы, арматурные работы, опалубка, Навоийская ТЭС, ПГУ, подстанция 500/220 кВ, ТЭС Талимарджан, TPC2, строительная компания Ташкент, подрядчик Узбекистан, железобетон",
-  en: "CASA Construction, construction company Uzbekistan, power plant construction, Navoi TPP CCGT, Larsen & Toubro, Energy China, UET Construction, industrial construction Uzbekistan, cast-in-place concrete, rebar works, formwork, Navoi TPP, CCGT, 500/220 kV substation, Talimarjan TPP, TPC2, construction company Tashkent, reinforced concrete contractor",
+  en: "CASA Construction, construction company Uzbekistan, power plant construction, Navoi TPP CCGT, Energy China, UET Construction, industrial construction Uzbekistan, cast-in-place concrete, rebar works, formwork, Navoi TPP, CCGT, 500/220 kV substation, Talimarjan TPP, TPC2, construction company Tashkent, reinforced concrete contractor",
 };
 
 export const PAGES = {

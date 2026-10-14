@@ -9,9 +9,9 @@ export const CONTACTS = {
 // Havolalar hali yo‘q: url bo‘sh qolsa, ikonka turadi, lekin hech qayerga olib bormaydi
 export const SOCIALS = [
   { id: "telegram", name: "Telegram", url: "" },
-  { id: "instagram", name: "Instagram", url: "" },
+  { id: "instagram", name: "Instagram", url: "https://instagram.com/casa_uz" },
   { id: "facebook", name: "Facebook", url: "" },
-  { id: "youtube", name: "YouTube", url: "" },
+  { id: "youtube", name: "YouTube", url: "https://youtube.com/@casaconstruction_uz" },
 ];
 
 // Bosh sahifa: raqamlar (matnlari i18n -> figs)
@@ -32,7 +32,8 @@ export const GALLERY = ["p412", "p415", "p418", "p501", "p408", "p420", "p416", 
 // Bosh sahifa mozaikasi
 export const MOSAIC = ["p418", "p408", "p420", "p501", "p411", "p504"];
 
-export const PARTNER_IDS = ["uet", "energychina", "lt", "acwa", "calik", "mitsubishi", "viva", "omega"];
+// "lt" (Larsen & Toubro) vaqtincha yashirilgan. Qaytarish uchun ro‘yxatga "lt" ni qo‘shing (matnlari i18n da turibdi).
+export const PARTNER_IDS = ["uet", "energychina", "acwa", "calik", "mitsubishi", "viva", "omega"];
 // Hamkorlar saytlari (bo‘sh bo‘lsa — havola yo‘q)
 export const PARTNER_LINKS = { viva: "https://vivaconstructions.uz" };
 
