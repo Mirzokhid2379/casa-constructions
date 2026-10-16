@@ -82,7 +82,7 @@ export default {
     nameVal: "“CASA” mas’uliyati cheklangan jamiyat",
     formVal: "Mas’uliyati cheklangan jamiyat",
     capitalUnit: "so‘m",
-    addressVal: "Toshkent sh., Bektemir tumani, Zabardast MFY, Sohibkor ko‘chasi, 5-uy",
+    addressVal: "Toshkent sh., Bektemir tumani, Zabardast MFY, Bektemir Shoh ko‘chasi, 13-uy",
     caption: "Davlat ro‘yxatidan o‘tganlik guvohnomasi",
   },
 

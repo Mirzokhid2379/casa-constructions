@@ -82,7 +82,7 @@ export default {
     nameVal: "CASA Limited Liability Company",
     formVal: "Limited liability company",
     capitalUnit: "UZS",
-    addressVal: "5 Sohibkor St., Zabardast, Bektemir district, Tashkent",
+    addressVal: "13 Bektemir Shoh St., Zabardast, Bektemir district, Tashkent",
     caption: "Certificate of state registration",
   },
 

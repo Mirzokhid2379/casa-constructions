@@ -17,7 +17,7 @@ const linkProps = (s) => (s.url ? { href: s.url, target: "_blank", rel: "noopene
 export default function Socials({ className = "" }) {
   return (
     <div className={`socials ${className}`}>
-      {SOCIALS.map((s) => (
+      {SOCIALS.filter((s) => s.url).map((s) => (
         <a key={s.id} className="soc" aria-label={s.name} title={s.name} {...linkProps(s)}><SocialIcon id={s.id} /></a>
       ))}
     </div>

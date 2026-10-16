@@ -6,7 +6,7 @@ import { img, srcSet, bgBig, bgCard } from "../components/Img.js";
 import { LogoMark } from "../components/Logo.jsx";
 import Icon from "../components/Icons.jsx";
 import { useLightbox } from "../components/Lightbox.jsx";
-import { Arrow, Closing, SectionHead, useReveal, HouseFrame } from "../components/Blocks.jsx";
+import { Arrow, Closing, SectionHead, useReveal, HouseShow } from "../components/Blocks.jsx";
 import Documents from "../components/Documents.jsx";
 import Partners from "../components/Partners.jsx";
 import { FIGS, MOSAIC, STAGES } from "../data/site.js";
@@ -88,11 +88,7 @@ function NowBuilding() {
   return (
     <section className="now">
       <div className="wrap now-g">
-        <div className="now-ph rv">
-          <Link to="/loyiha/navoiy" className="now-a" style={{ backgroundImage: bgCard("v03") }} aria-label={n.title} />
-          <Link to="/loyiha/navoiy" className="now-b" style={{ backgroundImage: bgCard("v05") }} aria-label={n.title} />
-          <Link to="/loyiha/navoiy" className="now-c" style={{ backgroundImage: bgCard("v04") }} aria-label={n.title} />
-        </div>
+        <HouseShow keys={["h01", "h04", "h02", "h06"]} to="/loyiha/navoiy" alt={n.title} />
         <div className="now-tx rv">
           <span className="live"><i />{t.projects.active}</span>
           <h2>{n.title}</h2>
@@ -139,13 +135,13 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <HouseFrame bg={bgCard("p416")} />
+          <HouseShow keys={["h05", "h03", "h08"]} alt={t.about.eyebrow} delay={1400} />
         </div>
       </section>
 
       <section className="feat silk">
         <div className="wrap feat-g">
-          <HouseFrame bg={bgCard("p415")} className="dark" />
+          <HouseShow keys={["h07", "h02", "h04", "h01"]} to="/loyiha/talimarjon" alt={t.feat.title} className="dark" delay={2800} />
           <div className="rv">
             <div className="eyebrow">{t.feat.eyebrow}</div>
             <h2 className="feat-h">{t.feat.title}</h2>

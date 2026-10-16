@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { img, srcSet } from "./Img.js";
 import { Link } from "react-router-dom";
 import { useI18n } from "../i18n/index.jsx";
 
@@ -73,6 +74,32 @@ export function HouseFrame({ bg, className = "" }) {
       <svg className="hf-line" viewBox="0 0 100 125" preserveAspectRatio="none" aria-hidden="true">
         <path d="M1.5 34.5 L50 2 L71 16 V6.5 H80 V22 L98.5 34.5 V123.5 H1.5 Z" vectorEffect="non-scaling-stroke" />
       </svg>
+    </div>
+  );
+}
+
+// Uy ichidagi rasmlar (yashil fon, turbina va quyosh paneli bilan) — o‘zi almashib turadi
+export function HouseShow({ keys, to, alt = "", className = "", delay = 0 }) {
+  const [i, setI] = useState(0);
+  const [pause, setPause] = useState(false);
+  useEffect(() => {
+    if (pause || keys.length < 2 || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    let id;
+    const t0 = setTimeout(() => { id = setInterval(() => setI((x) => (x + 1) % keys.length), 4200); }, delay);
+    return () => { clearTimeout(t0); clearInterval(id); };
+  }, [pause, keys.length, delay]);
+  const pics = keys.map((k, n) => (
+    <img key={k} className={n === i ? "on" : ""} src={img(k, 1024)} srcSet={srcSet(k).replace(/, [^,]+1600w$/, ", " + img(k) + " 1377w")}
+      sizes="(max-width: 860px) 92vw, 560px" alt={alt} loading={n ? "lazy" : undefined} decoding="async" />
+  ));
+  return (
+    <div className={`hshow rv ${className}`} onMouseEnter={() => setPause(true)} onMouseLeave={() => setPause(false)}>
+      {to ? <Link to={to} className="hs-pics" aria-label={alt}>{pics}</Link> : <div className="hs-pics">{pics}</div>}
+      {keys.length > 1 && (
+        <div className="hs-dots">
+          {keys.map((k, n) => <button key={k} type="button" className={n === i ? "on" : ""} onClick={() => setI(n)} aria-label={`${n + 1}`} />)}
+        </div>
+      )}
     </div>
   );
 }

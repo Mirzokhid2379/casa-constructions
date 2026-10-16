@@ -8,7 +8,7 @@ export default function Documents() {
   const { t } = useI18n();
   const d = t.docs;
   const [openPhotos, lightbox] = useLightbox();
-  const doc = [["guvohnoma", d.caption]];
+  const doc = [["guvohnoma-2", d.caption]];
   const rows = [
     [d.rows.name, d.nameVal],
     [d.rows.stir, REQUISITES.stir],
@@ -24,7 +24,7 @@ export default function Documents() {
         <SectionHead eyebrow={d.eyebrow} title={d.title}>{d.text}</SectionHead>
         <div className="docs-g">
           <button type="button" className="doc-paper rv" onClick={() => openPhotos(doc, 0)} aria-label={d.open}>
-            <img src="/images/guvohnoma.webp" alt={d.caption} loading="lazy" />
+            <img src="/images/guvohnoma-2.webp" alt={d.caption} loading="lazy" />
             <span className="doc-open"><Icon name="doc" size={18} /> {d.open}</span>
           </button>
           <dl className="req rv">
