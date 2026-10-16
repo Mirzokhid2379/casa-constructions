@@ -40,7 +40,7 @@ export default function Projects() {
   return (
     <>
       <PageTitle title={t.nav.project} />
-      <PageBand crumb={t.nav.project} title={t.projects.title} img={bgBig("v06")}>{t.projects.lead}</PageBand>
+      <PageBand crumb={t.nav.project} title={t.projects.title} img={bgBig("n05")}>{t.projects.lead}</PageBand>
       <section>
         <div className="wrap pc-list">
           {PROJECTS.map((pr) => <ProjectCard key={pr.id} pr={pr} big />)}

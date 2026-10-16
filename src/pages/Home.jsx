@@ -110,7 +110,7 @@ export default function Home() {
   const { t } = useI18n();
   const [openPhotos, lightbox] = useLightbox();
   useReveal(t);
-  const mosaic = MOSAIC.map((k) => [k, t.project.title]);
+  const mosaic = MOSAIC.map((k) => [k, k[0] === "n" ? t.navoiy.title : t.project.title]);
   const dirIcons = ["factory", "column", "shield"];
   const advIcons = ["shield", "helmet", "hand"];
 

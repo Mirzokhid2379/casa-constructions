@@ -27,10 +27,17 @@ export const STAGES = [
 ];
 
 // Loyiha sahifasi galereyasi
-export const GALLERY = ["p412", "p415", "p418", "p501", "p408", "p420", "p416", "p411", "p504", "p413", "p507", "p401", "p419", "p503", "p502", "p407", "p417", "p505", "p414", "p506"];
+// Talimarjon: boshidan oxirigacha tartib bilan. [rasm, bosqich] — bosqich nomlari i18n -> galStages
+export const GALLERY = [
+  ["p417", 1], ["p505", 1], ["p506", 1],
+  ["p418", 2], ["p419", 2], ["p501", 2], ["p503", 2], ["p504", 2],
+  ["p414", 3], ["p415", 3], ["p416", 3], ["p420", 3], ["p507", 3],
+  ["p401", 4], ["p407", 4], ["p408", 4],
+  ["p411", 7], ["p413", 7], ["p502", 7], ["p412", 7],
+];
 
 // Bosh sahifa mozaikasi
-export const MOSAIC = ["p418", "p408", "p420", "p501", "p411", "p504"];
+export const MOSAIC = ["n14", "n11", "n18", "n10", "n05", "p412"];
 
 // "lt" (Larsen & Toubro) vaqtincha yashirilgan. Qaytarish uchun ro‘yxatga "lt" ni qo‘shing (matnlari i18n da turibdi).
 export const PARTNER_IDS = ["uet", "energychina", "acwa", "calik", "mitsubishi", "viva", "omega"];
@@ -46,8 +53,10 @@ export const REQUISITES = {
 
 // Loyihalar: "navoiy" — hozir qurilmoqda, "talimarjon" — bajarilgan.
 // i18n kaliti: navoiy -> t.navoiy, talimarjon -> t.project
-export const NAVOIY_GALLERY = Array.from({ length: 24 }, (_, i) => `v${String(i + 1).padStart(2, "0")}`);
+// Navoiy: qurilish jarayoni tartib bilan (umumiy ko‘rinish -> yer ishlari -> ... -> tayyor inshootlar)
+const NS = [0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 6];
+export const NAVOIY_GALLERY = NS.map((st, i) => [`n${String(i + 1).padStart(2, "0")}`, st]);
 export const PROJECTS = [
-  { id: "navoiy", key: "navoiy", status: "active", cover: "v01", to: "/loyiha/navoiy" },
+  { id: "navoiy", key: "navoiy", status: "active", cover: "n14", to: "/loyiha/navoiy" },
   { id: "talimarjon", key: "project", status: "done", cover: "p412", to: "/loyiha/talimarjon" },
 ];

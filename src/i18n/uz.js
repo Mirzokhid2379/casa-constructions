@@ -114,8 +114,8 @@ export default {
       "Poydevor va yerosti inshootlari, gidroizolyatsiya bilan",
       "Metall qoliplar, havozalar va xavfsiz ish joylari",
     ],
-    galTitle: "Obyektdan yangi rasmlar",
-    galText: (n) => `${n} ta rasm. Bosing — katta ko‘rinishda ochiladi.`,
+    galTitle: "Qurilish jarayoni — boshidan hozirgacha",
+    galText: (n) => `${n} ta rasm, ish tartibida. Bosing — katta ko‘rinishda ochiladi.`,
   },
 
   project: {
@@ -136,8 +136,8 @@ export default {
     ],
     timeTitle: "Muddat",
     timeline: [["15.08.2024", "Ishlar boshlandi"], ["Avgust — sentabr", "Poydevor va armatura ishlari"], ["Oktabr", "Ustunlar, devorlar va plitalar"], ["24.11.2024", "Ishlar yakunlandi"]],
-    galTitle: "Obyekt fotosuratlari",
-    galText: (n) => `${n} ta rasm. Bosing — katta ko‘rinishda ochiladi.`,
+    galTitle: "Boshidan oxirigacha",
+    galText: (n) => `${n} ta rasm: yer ishlaridan topshirishgacha. Bosing — katta ko‘rinishda ochiladi.`,
   },
 
   process: {
@@ -148,6 +148,7 @@ export default {
     stage: "Bosqich",
     photos: (n) => `${n} ta rasm`,
   },
+  galStages: ["Umumiy ko‘rinish", "Yer ishlari", "Armatura ishlari", "Qolip va beton", "Minora va ustunlar", "Aylana inshootlar", "Tayyor inshootlar", "Bosh bino yonidagi inshootlar"],
   stages: [
     { t: "Tayyorgarlik va yer ishlari", d: "Maydon yuklagich va samosvallar bilan tekislanadi, keyin poydevor chuqurlari va xandaqlar qaziladi, tagi betonlanadi. Har bir o‘q bosh pudratchi muhandislari bilan birga tekshiriladi.", pts: ["Maydonni tekislash", "Chuqur va xandaqlar", "Geodezik nazorat"] },
     { t: "Armatura ishlari", d: "Poydevor plitalari, devorlar va ustunlar uchun armatura karkaslari joyida yig‘iladi. Loyiha davomida jami 2 307,84 tonna armatura bog‘landi.", pts: ["2 307,84 t armatura", "Poydevor va devor karkaslari", "Havozalarda xavfsiz ish"] },

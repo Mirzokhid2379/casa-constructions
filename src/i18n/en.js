@@ -114,8 +114,8 @@ export default {
       "Foundations and underground structures with waterproofing",
       "Steel formwork, scaffolding and safe working areas",
     ],
-    galTitle: "Latest photos from the site",
-    galText: (n) => `${n} photos. Tap to open full size.`,
+    galTitle: "Construction progress — from day one",
+    galText: (n) => `${n} photos in work order. Tap to open full size.`,
   },
 
   project: {
@@ -136,8 +136,8 @@ export default {
     ],
     timeTitle: "Timeline",
     timeline: [["15.08.2024", "Works started"], ["August — September", "Foundations and rebar"], ["October", "Columns, walls and slabs"], ["24.11.2024", "Works completed"]],
-    galTitle: "Site photos",
-    galText: (n) => `${n} photos. Tap to open full size.`,
+    galTitle: "From start to handover",
+    galText: (n) => `${n} photos: from earthworks to handover. Tap to open full size.`,
   },
 
   process: {
@@ -148,6 +148,7 @@ export default {
     stage: "Stage",
     photos: (n) => `${n} photos`,
   },
+  galStages: ["Overview", "Earthworks", "Rebar works", "Formwork & concrete", "Towers & columns", "Circular structures", "Completed structures", "Structures by the main building"],
   stages: [
     { t: "Preparation and earthworks", d: "The site is levelled with loaders and dump trucks, then pits and trenches are excavated and blinding concrete is laid. Every axis is checked with the general contractor’s engineers.", pts: ["Site levelling", "Pits and trenches", "Survey control"] },
     { t: "Rebar works", d: "Rebar cages for foundation slabs, walls and columns are assembled on site. In total, 2,307.84 t of rebar were tied.", pts: ["2,307.84 t of rebar", "Foundation and wall cages", "Safe work on scaffolding"] },

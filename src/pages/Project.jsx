@@ -12,7 +12,7 @@ function ProjectView({ p, tag, cover, gallery, live, otherTo, otherLabel }) {
   const { t } = useI18n();
   const [openPhotos, lightbox] = useLightbox();
   useReveal(t);
-  const photos = gallery.map((k) => [k, p.title]);
+  const photos = gallery.map(([k, st]) => [k, `${p.title} — ${t.galStages[st]}`, t.galStages[st]]);
   return (
     <>
       <PageTitle title={p.title} />
@@ -69,10 +69,12 @@ function ProjectView({ p, tag, cover, gallery, live, otherTo, otherLabel }) {
       <section className={p.timeline ? "" : "gal-sec"}>
         <div className="wrap">
           <SectionHead eyebrow={p.title} title={p.galTitle}>{p.galText(photos.length)}</SectionHead>
-          <div className="gal">
-            {photos.map(([k, c], i) => (
+          <div className="gal story">
+            {photos.map(([k, c, st], i) => (
               <button type="button" key={k} onClick={() => openPhotos(photos, i)} aria-label={`${c} ${i + 1}`}>
-                <img src={img(k, 640)} srcSet={srcSet(k)} sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 400px" alt={c} loading="lazy" decoding="async" />
+                <img src={img(k, 640)} srcSet={srcSet(k)} sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 300px" alt={c} loading="lazy" decoding="async" />
+                <span className="st-no">{String(i + 1).padStart(2, "0")}</span>
+                {(i === 0 || photos[i - 1][2] !== st) && <span className="st-lb">{st}</span>}
               </button>
             ))}
           </div>
@@ -92,7 +94,7 @@ export function ProjectTalimarjon() {
 
 export function ProjectNavoiy() {
   const { t } = useI18n();
-  return <ProjectView p={t.navoiy} tag={t.navoiy.tag} cover="v01" gallery={NAVOIY_GALLERY} live otherTo="/loyiha" otherLabel={t.nav.project} />;
+  return <ProjectView p={t.navoiy} tag={t.navoiy.tag} cover="n14" gallery={NAVOIY_GALLERY} live otherTo="/loyiha" otherLabel={t.nav.project} />;
 }
 
 // Eski App.jsx bilan ham ishlashi uchun (import Project from "./pages/Project.jsx")
