@@ -3,7 +3,8 @@
 
 export const CONTACTS = {
   phone: "+998 33 002 22 24",
-  email: "info@casaconstruction.uz", // vaqtincha: domen olingach almashtiring
+  email: "info@casaconstruction.uz",
+  gmail: "casaconstruction.uz@gmail.com",
 };
 
 // Havolalar hali yo‘q: url bo‘sh qolsa, ikonka turadi, lekin hech qayerga olib bormaydi

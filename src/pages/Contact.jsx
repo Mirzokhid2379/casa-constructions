@@ -54,6 +54,7 @@ export default function Contact() {
             <div className="ct-row"><span className="ic"><Icon name="user" size={22} /></span><div><span>{c.director}</span><b>{t.company.leader[0]}</b></div></div>
             <div className="ct-row"><span className="ic"><Icon name="phone" size={22} /></span><div><span>{c.phone}</span><a href={`tel:${tel}`}><b>{CONTACTS.phone}</b></a></div><Copy text={CONTACTS.phone} /></div>
             <div className="ct-row"><span className="ic"><Icon name="mail" size={22} /></span><div><span>{c.email}</span><a href={`mailto:${CONTACTS.email}`}><b>{CONTACTS.email}</b></a></div><Copy text={CONTACTS.email} /></div>
+            <div className="ct-row"><span className="ic"><Icon name="mail" size={22} /></span><div><span>Gmail</span><a href={`mailto:${CONTACTS.gmail}`}><b>{CONTACTS.gmail}</b></a></div><Copy text={CONTACTS.gmail} /></div>
             <div className="ct-row"><span className="ic"><Icon name="pin" size={22} /></span><div><span>{c.address}</span><b>{t.contact.officeVal}</b></div></div>
             <div className="ct-row"><span className="ic"><Icon name="doc" size={22} /></span><div><span>{c.legal}</span><b>{t.docs.addressVal}</b></div></div>
             <div className="ct-soc"><span>{t.social.title}</span><Socials /></div>

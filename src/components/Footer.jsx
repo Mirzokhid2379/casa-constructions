@@ -42,6 +42,7 @@ export default function Footer() {
             <h4>{t.nav.contact}</h4>
             <a className="ftel" href={`tel:${CONTACTS.phone.replace(/\s/g, "")}`}>{CONTACTS.phone}</a>
             <a href={`mailto:${CONTACTS.email}`}>{CONTACTS.email}</a>
+            <a href={`mailto:${CONTACTS.gmail}`}>{CONTACTS.gmail}</a>
             <span className="faddr"><em>{t.contact.address}:</em> {t.contact.officeVal}</span>
             <span className="faddr"><em>{t.contact.legal}:</em> {t.docs.addressVal}</span>
           </div>

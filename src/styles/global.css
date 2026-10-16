@@ -470,7 +470,21 @@ a.hs-pics:hover{transform:translateY(-4px)}
 .hshow.dark .hs-svg{filter:drop-shadow(0 26px 40px rgba(0,0,0,.45))}
 .hs-svg image{opacity:0;transition:opacity 1.2s var(--ease)}
 .hs-svg image.on{opacity:1}
-.hs-dots{display:flex;justify-content:center;gap:8px;margin-top:18px}
+.hs-nav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:20px}
+.hs-dots{display:flex;justify-content:center;gap:8px}
+.hs-count{font:600 13px/1 var(--f-h);letter-spacing:.08em;color:var(--muted);min-width:52px;text-align:center}
+.hs-count b{color:var(--g800);font-weight:800}
+.hs-arr{display:grid;place-items:center;width:44px;height:44px;padding:0;border-radius:50%;cursor:pointer;
+  border:1.5px solid rgba(185,133,61,.55);background:rgba(255,255,255,.6);color:var(--g800);
+  backdrop-filter:blur(6px);box-shadow:0 8px 18px -10px rgba(10,36,30,.35);transition:background .3s,color .3s,border-color .3s,transform .3s}
+.hs-arr:hover{background:linear-gradient(135deg,#E9C98A,#C29150);border-color:transparent;color:#0F2A22;transform:translateY(-2px)}
+.hs-arr:active{transform:scale(.95)}
+.hs-arr:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.hshow.dark .hs-count{color:rgba(255,255,255,.55)}
+.hshow.dark .hs-count b{color:#fff}
+.hshow.dark .hs-arr{background:rgba(255,255,255,.06);color:#F3E4C2;border-color:rgba(232,203,140,.45)}
+.hshow.dark .hs-arr:hover{background:linear-gradient(135deg,#E9C98A,#C29150);color:#0F2A22}
+@media (max-width:520px){.hs-nav{gap:10px}.hs-count{display:none}.hs-arr{width:40px;height:40px}}
 .hs-dots button{width:8px;height:8px;padding:0;border:0;border-radius:99px;background:rgba(10,36,30,.25);cursor:pointer;transition:width .3s,background .3s}
 .hs-dots button.on{width:26px;background:var(--gold)}
 .hshow.dark .hs-dots button{background:rgba(255,255,255,.3)}
@@ -486,3 +500,4 @@ a.hs-pics:hover{transform:translateY(-4px)}
 .st-lb{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;background:linear-gradient(transparent,rgba(6,26,20,.85));color:#fff;font-weight:700;font-size:13px;letter-spacing:.04em;text-transform:uppercase;text-align:left}
 @media (max-width:1000px){.gal.story{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:640px){.gal.story{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.st-lb{font-size:11px;padding:20px 8px 8px}}
+.foot a{overflow-wrap:anywhere}

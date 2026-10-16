@@ -1,4 +1,4 @@
-import { useEffect, useId, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { img } from "./Img.js";
 import { Link } from "react-router-dom";
 import { useI18n } from "../i18n/index.jsx";
@@ -84,13 +84,26 @@ const BLADE = "M0 -7 C40 -9 120 -14 178 -22 C214 -27 236 -20 236 0 C236 20 214 2
 export function HouseShow({ keys, to, alt = "", className = "", delay = 0 }) {
   const [i, setI] = useState(0);
   const [pause, setPause] = useState(false);
+  const [tick, setTick] = useState(0); // qo‘lda o‘tkazilganda avto-almashish taymeri qaytadan boshlanadi
   const id = useId().replace(/:/g, "");
+  const N = keys.length;
+  const go = (d) => { setI((x) => (x + d + N) % N); setTick((x) => x + 1); };
+  const pick = (n) => { setI(n); setTick((x) => x + 1); };
   useEffect(() => {
-    if (pause || keys.length < 2 || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (pause || N < 2 || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     let t;
-    const t0 = setTimeout(() => { t = setInterval(() => setI((x) => (x + 1) % keys.length), 4500); }, delay);
+    const t0 = setTimeout(() => { t = setInterval(() => setI((x) => (x + 1) % N), 4500); }, tick ? 4500 : delay);
     return () => { clearTimeout(t0); clearInterval(t); };
-  }, [pause, keys.length, delay]);
+  }, [pause, N, delay, tick]);
+  // Telefonda barmoq bilan surish
+  const sx = useRef(null);
+  const onTouchStart = (e) => { sx.current = e.touches[0].clientX; };
+  const onTouchEnd = (e) => {
+    if (sx.current == null) return;
+    const dx = e.changedTouches[0].clientX - sx.current;
+    sx.current = null;
+    if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1);
+  };
   const art = (
     <svg className="hs-svg" viewBox="40 40 1250 1070" role="img" aria-label={alt}>
       <defs>
@@ -129,11 +142,21 @@ export function HouseShow({ keys, to, alt = "", className = "", delay = 0 }) {
     </svg>
   );
   return (
-    <div className={`hshow rv ${className}`} onMouseEnter={() => setPause(true)} onMouseLeave={() => setPause(false)}>
+    <div className={`hshow rv ${className}`} onMouseEnter={() => setPause(true)} onMouseLeave={() => setPause(false)}
+      onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
       {to ? <Link to={to} className="hs-pics" aria-label={alt}>{art}</Link> : <div className="hs-pics">{art}</div>}
-      {keys.length > 1 && (
-        <div className="hs-dots">
-          {keys.map((k, n) => <button key={k} type="button" className={n === i ? "on" : ""} onClick={() => setI(n)} aria-label={`${n + 1}`} />)}
+      {N > 1 && (
+        <div className="hs-nav">
+          <button type="button" className="hs-arr" onClick={() => go(-1)} aria-label="Previous">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>
+          </button>
+          <div className="hs-dots">
+            {keys.map((k, n) => <button key={k} type="button" className={n === i ? "on" : ""} onClick={() => pick(n)} aria-label={`${n + 1}`} />)}
+          </div>
+          <span className="hs-count"><b>{String(i + 1).padStart(2, "0")}</b> / {String(N).padStart(2, "0")}</span>
+          <button type="button" className="hs-arr" onClick={() => go(1)} aria-label="Next">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg>
+          </button>
         </div>
       )}
     </div>
