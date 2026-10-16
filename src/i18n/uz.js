@@ -165,8 +165,8 @@ export default {
       "CASA Construction 2024-yilda Toshkentda tashkil topgan. Kompaniya yashash uchun mo‘ljallanmagan binolar — sanoat va energetika obyektlari qurilishiga ixtisoslashgan.",
       "Birinchi yirik loyihamiz — Talimarjon IES TPC2: 101 kun ichida 6 523 m³ beton va 2 307,84 tonna armatura ishlari bajarildi.",
     ],
-    leaderTitle: "Rahbariyat",
-    leader: ["Ahmadjonov Xumoyun Taxavvurovich", "Direktor"],
+    leaderTitle: "Ta’sischi",
+    leader: ["Ahmadjonov Xumoyun Taxavvurovich", "Ta’sischi"],
     servicesTitle: "Xizmatlarimiz",
     services: [
       ["Monolit beton ishlari", "Poydevor, devor, ustun va plitalar."],
@@ -179,7 +179,7 @@ export default {
   contact: {
     title: "Loyihangizni muhokama qilamiz",
     lead: "Sanoat yoki infratuzilma obyekti bo‘yicha yozing — taklif tayyorlaymiz.",
-    director: "Direktor", phone: "Telefon", email: "Elektron pochta", address: "Bosh ofis", legal: "Yuridik manzil",
+    director: "Ta’sischi", phone: "Telefon", email: "Elektron pochta", address: "Bosh ofis", legal: "Yuridik manzil",
     officeVal: "Toshkent sh., Shayxontohur tumani, O‘qchi MFY, Islom Karimov ko‘chasi, 1a-uy, 4, “NEST ONE” binosi",
     formTitle: "So‘rov yuborish", name: "Ism va kompaniya", contact: "Telefon yoki pochta", msg: "Loyiha haqida qisqacha", msgPh: "Obyekt turi, hajm, joylashuv, muddat…",
     send: "Yuborish", sending: "Yuborilmoqda…", fail: "Xabar yuborilmadi. Iltimos, qo‘ng‘iroq qiling:", err: "Ism va telefon yoki pochtani kiriting.", ok: "Rahmat! So‘rovingiz yuborildi. Tez orada siz bilan bog‘lanamiz.",

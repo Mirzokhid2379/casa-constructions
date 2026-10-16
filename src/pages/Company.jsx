@@ -2,7 +2,7 @@ import { PageTitle } from "../seo/Head.jsx";
 import { useI18n } from "../i18n/index.jsx";
 import { img, srcSet, bgBig, bgCard } from "../components/Img.js";
 import Icon from "../components/Icons.jsx";
-import { Closing, PageBand, SectionHead, useReveal, HouseFrame } from "../components/Blocks.jsx";
+import { Closing, PageBand, SectionHead, useReveal, HouseShow } from "../components/Blocks.jsx";
 import Documents from "../components/Documents.jsx";
 import Partners from "../components/Partners.jsx";
 
@@ -22,10 +22,10 @@ export default function Company() {
             {c.about.map((p) => <p className="about-tx" key={p}>{p}</p>)}
             <div className="leader">
               <span className="ic"><Icon name="user" /></span>
-              <div><span>{c.leaderTitle}</span><b>{c.leader[0]}</b><small>{c.leader[1]}</small></div>
+              <div><span>{c.leaderTitle}</span><b>{c.leader[0]}</b></div>
             </div>
           </div>
-          <HouseFrame bg={bgCard("p413")} />
+          <HouseShow keys={["t01", "n14", "t04", "n11"]} alt={c.title} />
         </div>
       </section>
       <section className="adv silk">

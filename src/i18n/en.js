@@ -165,8 +165,8 @@ export default {
       "CASA Construction was founded in Tashkent in 2024. The company specialises in non-residential construction — industrial and energy facilities.",
       "Our first major project is Talimarjan TPP TPC2: 6,523 m³ of concrete and 2,307.84 t of rebar works in 101 days.",
     ],
-    leaderTitle: "Management",
-    leader: ["Khumoyun Akhmadjonov", "Director"],
+    leaderTitle: "Founder",
+    leader: ["Khumoyun Akhmadjonov", "Founder"],
     servicesTitle: "Our services",
     services: [
       ["Cast-in-place concrete", "Foundations, walls, columns and slabs."],
@@ -179,7 +179,7 @@ export default {
   contact: {
     title: "Let’s discuss your project",
     lead: "Write to us about your industrial or infrastructure project — we will prepare a proposal.",
-    director: "Director", phone: "Phone", email: "Email", address: "Head office", legal: "Legal address",
+    director: "Founder", phone: "Phone", email: "Email", address: "Head office", legal: "Legal address",
     officeVal: "NEST ONE building, 1a Islam Karimov St., office 4, Ukchi, Shaykhantakhur district, Tashkent",
     formTitle: "Send a request", name: "Name and company", contact: "Phone or email", msg: "About the project", msgPh: "Type of facility, volume, location, schedule…",
     send: "Send", sending: "Sending…", fail: "Could not send. Please call us:", err: "Please enter your name and a phone or email.", ok: "Request received. We will be in touch soon.",
