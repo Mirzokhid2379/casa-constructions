@@ -12,7 +12,8 @@ function ProjectView({ p, tag, cover, gallery, live, otherTo, otherLabel }) {
   const { t } = useI18n();
   const [openPhotos, lightbox] = useLightbox();
   useReveal(t);
-  const photos = gallery.map(([k, st]) => [k, `${p.title} — ${t.galStages[st]}`, t.galStages[st]]);
+  const label = (st) => (typeof st === "string" ? t.stages[+st.slice(1)].t : t.galStages[st]);
+  const photos = gallery.map(([k, st]) => [k, `${p.title} — ${label(st)}`, label(st)]);
   return (
     <>
       <PageTitle title={p.title} />
@@ -89,7 +90,7 @@ function ProjectView({ p, tag, cover, gallery, live, otherTo, otherLabel }) {
 
 export function ProjectTalimarjon() {
   const { t } = useI18n();
-  return <ProjectView p={t.project} tag="TPC2 · 900 MW" cover="p412" gallery={GALLERY} otherTo="/jarayon" otherLabel={t.processSec.btn} />;
+  return <ProjectView p={t.project} tag="TPC2 · 900 MW" cover="t01" gallery={GALLERY} otherTo="/jarayon" otherLabel={t.processSec.btn} />;
 }
 
 export function ProjectNavoiy() {

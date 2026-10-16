@@ -148,13 +148,13 @@ export default {
     stage: "Stage",
     photos: (n) => `${n} photos`,
   },
-  galStages: ["Overview", "Earthworks", "Rebar works", "Formwork & concrete", "Towers & columns", "Circular structures", "Completed structures", "Structures by the main building"],
+  galStages: ["Overview", "Earthworks", "Rebar works", "Formwork & concrete", "Towers & columns", "Circular structures", "Completed structures", "Structures by the main building", "Handed-over plant"],
   stages: [
     { t: "Preparation and earthworks", d: "The site is levelled with loaders and dump trucks, then pits and trenches are excavated and blinding concrete is laid. Every axis is checked with the general contractor’s engineers.", pts: ["Site levelling", "Pits and trenches", "Survey control"] },
     { t: "Rebar works", d: "Rebar cages for foundation slabs, walls and columns are assembled on site. In total, 2,307.84 t of rebar were tied.", pts: ["2,307.84 t of rebar", "Foundation and wall cages", "Safe work on scaffolding"] },
     { t: "Formwork and concrete", d: "Steel and timber formwork is installed — from straight walls to circular structures — and then concrete is poured. 6,523 m³ of cast-in-place concrete in total.", pts: ["Steel panel formwork", "Circular structure formwork", "6,523 m³ of concrete"] },
-    { t: "Columns and foundations", d: "Column cages rise from the cast-in-place foundation slabs as the building supports take shape.", pts: ["Column cages", "Foundation slabs", "Dimension checks"] },
-    { t: "Structures by the main building", d: "Next to the plant’s steel-framed main building we built complex foundations and underground structures. Around 200 workers and specialists took part.", pts: ["Complex foundations", "Underground structures", "200 workers and specialists"] },
+    { t: "Columns and main building foundations", d: "Column cages rise from the cast-in-place foundation slabs. Next to the plant’s steel-framed main building we built complex foundations and underground structures.", pts: ["Column cages", "Complex foundations", "Underground structures"] },
+    { t: "Completion and handover", d: "All reinforced-concrete works were completed in 101 days and handed over to the general contractor. Today the plant is in operation — standing on our foundations.", pts: ["Completed in 101 days", "Handed over to the general contractor", "200 workers and specialists"] },
   ],
 
   company: {

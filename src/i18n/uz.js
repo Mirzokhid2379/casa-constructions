@@ -148,13 +148,13 @@ export default {
     stage: "Bosqich",
     photos: (n) => `${n} ta rasm`,
   },
-  galStages: ["Umumiy ko‘rinish", "Yer ishlari", "Armatura ishlari", "Qolip va beton", "Minora va ustunlar", "Aylana inshootlar", "Tayyor inshootlar", "Bosh bino yonidagi inshootlar"],
+  galStages: ["Umumiy ko‘rinish", "Yer ishlari", "Armatura ishlari", "Qolip va beton", "Minora va ustunlar", "Aylana inshootlar", "Tayyor inshootlar", "Bosh bino yonidagi inshootlar", "Topshirilgan obyekt"],
   stages: [
     { t: "Tayyorgarlik va yer ishlari", d: "Maydon yuklagich va samosvallar bilan tekislanadi, keyin poydevor chuqurlari va xandaqlar qaziladi, tagi betonlanadi. Har bir o‘q bosh pudratchi muhandislari bilan birga tekshiriladi.", pts: ["Maydonni tekislash", "Chuqur va xandaqlar", "Geodezik nazorat"] },
     { t: "Armatura ishlari", d: "Poydevor plitalari, devorlar va ustunlar uchun armatura karkaslari joyida yig‘iladi. Loyiha davomida jami 2 307,84 tonna armatura bog‘landi.", pts: ["2 307,84 t armatura", "Poydevor va devor karkaslari", "Havozalarda xavfsiz ish"] },
     { t: "Qolip va beton ishlari", d: "Metall va yog‘och qoliplar o‘rnatiladi — to‘g‘ri devorlardan aylana inshootlargacha — so‘ng beton quyiladi. Jami 6 523 m³ monolit beton.", pts: ["Metall panel qoliplar", "Aylana inshoot qolipi", "6 523 m³ beton"] },
-    { t: "Ustunlar va poydevorlar", d: "Monolit poydevor plitalari ustida ustun karkaslari ko‘tariladi — bino tayanchlari shakllanadi.", pts: ["Ustun karkaslari", "Poydevor plitalari", "O‘lcham nazorati"] },
-    { t: "Bosh bino yonidagi inshootlar", d: "Stansiyaning metall karkasli bosh binosi yonida murakkab poydevor va yerosti inshootlari barpo etildi. Ishda 200 ga yaqin ishchi va mutaxassis qatnashdi.", pts: ["Murakkab poydevorlar", "Yerosti inshootlari", "200 ishchi va mutaxassis"] },
+    { t: "Ustunlar va bosh bino poydevorlari", d: "Monolit poydevor plitalari ustida ustun karkaslari ko‘tariladi. Stansiyaning metall karkasli bosh binosi yonida murakkab poydevor va yerosti inshootlari barpo etildi.", pts: ["Ustun karkaslari", "Murakkab poydevorlar", "Yerosti inshootlari"] },
+    { t: "Yakunlash va topshirish", d: "Barcha temirbeton ishlari 101 kun ichida yakunlandi va bosh pudratchiga topshirildi. Bugun stansiya ishlab turibdi — poydevorlarimiz uning tayanchida.", pts: ["101 kunda yakunlandi", "Bosh pudratchiga topshirildi", "200 ishchi va mutaxassis"] },
   ],
 
   company: {

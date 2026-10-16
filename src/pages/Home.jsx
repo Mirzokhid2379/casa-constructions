@@ -18,7 +18,7 @@ function Hero() {
   const h = t.hero;
   return (
     <section className="hero">
-      <div className="hero-ph" style={{ backgroundImage: bgBig("p412") }} />
+      <div className="hero-ph" style={{ backgroundImage: bgBig("t02") }} />
       <div className="hero-mark" aria-hidden="true"><LogoMark size={520} /></div>
       <div className="wrap">
         <div className="eyebrow hero-eb">{h.eyebrow.map((x) => <span key={x}>{x}</span>)}</div>
@@ -88,7 +88,7 @@ function NowBuilding() {
   return (
     <section className="now">
       <div className="wrap now-g">
-        <HouseShow keys={["h01", "h04", "h02", "h06"]} to="/loyiha/navoiy" alt={n.title} />
+        <HouseShow keys={["n14", "n11", "n05", "n10"]} to="/loyiha/navoiy" alt={n.title} />
         <div className="now-tx rv">
           <span className="live"><i />{t.projects.active}</span>
           <h2>{n.title}</h2>
@@ -135,13 +135,13 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <HouseShow keys={["h05", "h03", "h08"]} alt={t.about.eyebrow} delay={1400} />
+          <HouseShow keys={["t04", "n13", "n08", "t06"]} alt={t.about.eyebrow} delay={1500} />
         </div>
       </section>
 
       <section className="feat silk">
         <div className="wrap feat-g">
-          <HouseShow keys={["h07", "h02", "h04", "h01"]} to="/loyiha/talimarjon" alt={t.feat.title} className="dark" delay={2800} />
+          <HouseShow keys={["t01", "t03", "t02", "t05"]} to="/loyiha/talimarjon" alt={t.feat.title} className="dark" delay={3000} />
           <div className="rv">
             <div className="eyebrow">{t.feat.eyebrow}</div>
             <h2 className="feat-h">{t.feat.title}</h2>
